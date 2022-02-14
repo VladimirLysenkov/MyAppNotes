@@ -11,17 +11,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        tools:text="Название заметки №1">
-
-    </TextView>
+        tools:text="Название заметки №1" />
 
     <TextView
         android:id="@+id/discription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Краткое описание заметки №1">
+        tools:text="Краткое описание заметки №1" />
 
-    </TextView>
 
     <TextView
         android:id="@+id/date_updated"
@@ -29,10 +26,7 @@
         android:layout_height="wrap_content"
         android:gravity="start"
         android:textSize="@dimen/textSizeTextViewList"
-        tools:text="10.02.2022">
-
-
-    </TextView>
+        tools:text="10.02.2022" />
 
 
 </LinearLayout>

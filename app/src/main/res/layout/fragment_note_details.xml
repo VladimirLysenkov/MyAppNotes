@@ -19,9 +19,7 @@
             android:layout_gravity="center"
             android:textSize="@dimen/textSizeTextViewDetails"
             android:textStyle="bold"
-            tools:text="Название заметки №1">
-
-        </TextView>
+            tools:text="Название заметки №1" />
 
         <TextView
             android:id="@+id/label_date_created"
@@ -29,9 +27,7 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="@string/date_created"
-            android:textSize="@dimen/textSizeTextViewList">
-
-        </TextView>
+            android:textSize="@dimen/textSizeTextViewList" />
 
         <TextView
             android:id="@+id/date_created"
@@ -39,9 +35,7 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:textSize="@dimen/textSizeTextViewList"
-            tools:text="10.02.2022">
-
-        </TextView>
+            tools:text="10.02.2022" />
 
         <TextView
             android:id="@+id/label_date_updated"
@@ -49,9 +43,7 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="@string/date_updated"
-            android:textSize="@dimen/textSizeTextViewList">
-
-        </TextView>
+            android:textSize="@dimen/textSizeTextViewList" />
 
         <TextView
             android:id="@+id/date_updated"
@@ -59,25 +51,19 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:textSize="@dimen/textSizeTextViewList"
-            tools:text="10.02.2022">
-
-        </TextView>
+            tools:text="10.02.2022" />
 
         <TextView
             android:id="@+id/discription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Описание заметки №1">
-
-        </TextView>
+            tools:text="Описание заметки №1" />
 
         <TextView
             android:id="@+id/note_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Текст заметки №1">
-
-        </TextView>
+            tools:text="Текст заметки №1" />
 
     </LinearLayout>
 
