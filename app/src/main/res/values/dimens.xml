@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paddingLinearLayout">12dp</dimen>
+    <dimen name="textSizeTextViewList">11sp</dimen>
+    <dimen name="textSizeTextViewDetails">25sp</dimen>
+</resources>

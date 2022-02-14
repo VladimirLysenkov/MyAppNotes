@@ -1,8 +1,10 @@
-package com.example.myappnotes;
+package com.example.myappnotes.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.myappnotes.R;
 
 public class MainActivity extends AppCompatActivity {
 
