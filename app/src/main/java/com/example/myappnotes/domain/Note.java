@@ -1,7 +1,11 @@
 package com.example.myappnotes.domain;
 
 
-public class Note {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+
+public class Note implements Parcelable {
     private final int id;
     private final String name;
     private final String description;
@@ -19,6 +23,27 @@ public class Note {
         this.noteText = noteText;
     }
 
+
+    protected Note(Parcel in) {
+        id = in.readInt();
+        name = in.readString();
+        description = in.readString();
+        createdAt = in.readString();
+        updatedAt = in.readString();
+        noteText = in.readString();
+    }
+
+    public static final Creator<Note> CREATOR = new Creator<Note>() {
+        @Override
+        public Note createFromParcel(Parcel in) {
+            return new Note(in);
+        }
+
+        @Override
+        public Note[] newArray(int size) {
+            return new Note[size];
+        }
+    };
 
     public int getId() {
         return id;
@@ -42,5 +67,21 @@ public class Note {
 
     public String getINoteText() {
         return noteText;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(String.valueOf(id));
+        dest.writeString(name);
+        dest.writeString(description);
+        dest.writeString(createdAt);
+        dest.writeString(updatedAt);
+        dest.writeString(noteText);
+
     }
 }

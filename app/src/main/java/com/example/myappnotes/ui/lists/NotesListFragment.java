@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.myappnotes.R;
 import com.example.myappnotes.domain.Note;
 import com.example.myappnotes.domain.NotesRepositoryImpl;
+import com.example.myappnotes.ui.details.NoteDetailsActivity;
 
 import java.util.List;
 
@@ -54,6 +55,13 @@ public class NotesListFragment extends Fragment implements NotesListView {
         for (Note note : notes) {
             View itemView = getLayoutInflater().inflate(R.layout.item_note, container, false);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    NoteDetailsActivity.show(requireContext(), note);
+                }
+            });
+
             TextView name = itemView.findViewById(R.id.name);
             name.setText(note.getName());
 
@@ -61,7 +69,7 @@ public class NotesListFragment extends Fragment implements NotesListView {
             description.setText(note.getDescription());
 
             TextView updatedAt = itemView.findViewById(R.id.date_updated);
-            updatedAt.setText(note.getUpdatedAt());
+            updatedAt.setText((CharSequence) note.getUpdatedAt());
 
             container.addView(itemView);
 
