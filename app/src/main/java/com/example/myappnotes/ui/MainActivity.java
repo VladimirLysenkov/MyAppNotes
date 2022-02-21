@@ -2,6 +2,7 @@ package com.example.myappnotes.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -12,6 +13,7 @@ import androidx.fragment.app.FragmentResultListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.myappnotes.R;
 import com.example.myappnotes.domain.Note;
@@ -46,6 +48,24 @@ public class MainActivity extends AppCompatActivity implements NavDrawable {
                 }
 
                 if (item.getItemId() == R.id.action_about) {
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.container_list, new Fragment())
+                            .commit();
+
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+
+                if (item.getItemId() == R.id.action_about) {
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.container_list, new Fragment())
+                            .commit();
+
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+
+                if (item.getItemId() == R.id.action_close) {
                     getSupportFragmentManager()
                             .beginTransaction()
                             .replace(R.id.container_list, new Fragment())
@@ -94,5 +114,18 @@ public class MainActivity extends AppCompatActivity implements NavDrawable {
 
     }
 
+    protected void showAlertDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.alert_dialog_title)
+                .setMessage(R.string.alert_dialog_message)
+                .setPositiveButton("Да", (dialogInterface, i) -> Toast.makeText(MainActivity.this, "Да!", Toast.LENGTH_SHORT).show())
+                .setNegativeButton("Нет", (dialogInterface, i) -> Toast.makeText(MainActivity.this, "Нет!", Toast.LENGTH_SHORT).show())
+                .create();
+    }
+
+
+    public void onBackPressed() {
+        showAlertDialog();
+    }
 
 }

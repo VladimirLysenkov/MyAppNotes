@@ -17,6 +17,9 @@
         <item
             android:id="@+id/action_about"
             android:title="@string/about" />
+        <item
+            android:id="@+id/action_close"
+            android:title="@string/close" />
 
 
     </group>
