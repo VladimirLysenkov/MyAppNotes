@@ -65,7 +65,7 @@ public class Note implements Parcelable {
         return updatedAt;
     }
 
-    public String getINoteText() {
+    public String getNoteText() {
         return noteText;
     }
 
@@ -76,7 +76,7 @@ public class Note implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(String.valueOf(id));
+        dest.writeInt(id);
         dest.writeString(name);
         dest.writeString(description);
         dest.writeString(createdAt);

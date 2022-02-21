@@ -2,4 +2,13 @@
     <string name="app_name">Заметки</string>
     <string name="date_updated">Дата изменения:</string>
     <string name="date_created">Дата создания:</string>
+    <string name="action_share">Share</string>
+    <string name="detail">Меню заметки</string>
+    <string name="notes">Заметки</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+    <string name="action_add">Добавить</string>
+    <string name="action_clear_all">Найти</string>
+    <string name="notes_list">Заметки</string>
+    <string name="about">О приложении</string>
 </resources>
